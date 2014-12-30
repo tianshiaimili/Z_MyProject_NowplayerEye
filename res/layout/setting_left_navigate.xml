@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="48dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/setting_nowid_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@color/setting_leftpanel_btn_bg_active"
+                        android:textColor="@color/setting_leftpanel_btn_textcolor_active"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="@dimen/setting_leftpanel_btn_text_margin_left"
+                        android:text="@string/setting_now_id"
+                        android:textSize="@dimen/setting_leftpanel_btn_textsize"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/setting_nowid_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/setting_leftpanel_btn_arrow_margin_right"
+                        android:src="@drawable/setting_disclosurearrow_active" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/separator" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/setting_language_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="@dimen/setting_leftpanel_btn_text_margin_left"
+                        android:text="@string/setting_language"
+                        android:textColor="@color/setting_leftpanel_btn_textcolor"
+                        android:textSize="@dimen/setting_leftpanel_btn_textsize"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/setting_language_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/setting_leftpanel_btn_arrow_margin_right"
+                        android:src="@drawable/setting_disclosurearrow" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ImageView06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/separator" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/setting_push_alert_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="@dimen/setting_leftpanel_btn_text_margin_left"
+                        android:text="@string/setting_push_alert"
+                        android:textColor="@color/setting_leftpanel_btn_textcolor"
+                        android:textSize="@dimen/setting_leftpanel_btn_textsize"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/setting_push_alert_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/setting_leftpanel_btn_arrow_margin_right"
+                        android:src="@drawable/setting_disclosurearrow" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ImageView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/separator" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/setting_related_app_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="@dimen/setting_leftpanel_btn_text_margin_left"
+                        android:text="@string/setting_related_app"
+                        android:textColor="@color/setting_leftpanel_btn_textcolor"
+                        android:textSize="@dimen/setting_leftpanel_btn_textsize"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/setting_related_app_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/setting_leftpanel_btn_arrow_margin_right"
+                        android:src="@drawable/setting_disclosurearrow" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ImageView04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/separator" />
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting_related_app_lo"
+                    android:visibility="invisible"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <Button
+                            android:id="@+id/setting_service_notice_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="64dp"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/setting_leftpanel_btn_text_margin_left"
+                            android:text="@string/setting_service_notice"
+                            android:textColor="@color/setting_leftpanel_btn_textcolor"
+                            android:textSize="@dimen/setting_leftpanel_btn_textsize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/setting_service_notice_imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/setting_leftpanel_btn_arrow_margin_right"
+                            android:src="@drawable/setting_disclosurearrow" />
+                    </RelativeLayout>
+
+				 <ImageView
+                    android:id="@+id/setting_related_app_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/separator" />
+
+                </LinearLayout>
+                
+                
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/setting_leftpanel_navbar_bg" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" >
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/setting_icon" />
+
+                    <TextView
+                        android:id="@+id/setting_left_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="@dimen/navbar_title_margintop"
+                        android:layout_toRightOf="@id/imageView7"
+                        android:shadowColor="#000000"
+                        android:shadowDy="-1"
+                        android:shadowRadius="1"
+                        android:text="@string/setting_title"
+                        android:textColor="@color/navbar_title_textcolor"
+                        android:textSize="@dimen/navbar_title_textsize"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

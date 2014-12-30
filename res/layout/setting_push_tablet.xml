@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg_repeat"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,ContentDescription,UselessParent" >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/main_frame_bg_dark_repeat" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:padding="0dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_rightpanel_item_height"
+                    android:layout_marginLeft="@dimen/setting_rightpanel_item_margin_left"
+                    android:layout_marginRight="@dimen/setting_rightpanel_margin_right"
+                    android:layout_marginTop="@dimen/setting_rightpanel_margin_top"
+                    android:background="@drawable/setting_itemrow_bg"
+                    android:padding="0dp" >
+
+                    <TextView
+                        android:id="@+id/TextView03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/setting_rightpanel_item_content_margin_left"
+                        android:text="@string/setting_recevice_push_alert"
+                        android:textColor="@color/setting_rightpanel_content_color"
+                        android:textSize="@dimen/setting_rightpanel_content_fontsize"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/setting_push_alert_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/setting_rightpanel_item_disclosure_margin_right" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_rightpanel_navbar_bg" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_rightpanel_shadow" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/navbar_title_margintop"
+                android:shadowColor="#000000"
+                android:shadowDy="-1"
+                android:shadowRadius="1"
+                android:text="@string/setting_push_alert_title"
+                android:textColor="@color/navbar_title_textcolor"
+                android:textSize="@dimen/navbar_title_textsize"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+</RelativeLayout>

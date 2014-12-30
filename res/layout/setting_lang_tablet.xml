@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg_repeat"
+    tools:context=".MainActivity"
+    tools:ignore="ContentDescription,ObsoleteLayoutParam,DisableBaselineAlignment,UselessParent" >
+
+      <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/main_frame_bg_dark_repeat" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:padding="0dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/setting_rightpanel_item_margin_left"
+                    android:layout_marginRight="@dimen/setting_rightpanel_margin_right"
+                    android:layout_marginTop="@dimen/setting_rightpanel_margin_top"
+                    android:background="@drawable/setting_itemrow_bg"
+                    android:orientation="vertical"
+                    android:padding="0dp" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/setting_language_zh_lo"
+                        android:layout_height="@dimen/setting_rightpanel_item_height"
+                        android:padding="0dp" >
+
+                        <TextView
+                            android:id="@+id/setting_language_zh_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/setting_rightpanel_item_content_margin_left"
+                            android:text="@string/setting_language_zh"
+                            android:textColor="@color/setting_rightpanel_content_color"
+                            android:textSize="@dimen/setting_rightpanel_content_fontsize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/setting_language_zh_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:visibility="invisible"
+                            android:layout_centerVertical="true"
+                              android:src="@drawable/setting_checkmark"
+                            android:layout_marginRight="@dimen/setting_rightpanel_item_disclosure_margin_right" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator" />
+
+                    <RelativeLayout
+                        android:id="@+id/setting_language_en_lo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/setting_rightpanel_item_height"
+                        android:padding="0dp" >
+
+                        <TextView
+                            android:id="@+id/setting_language_en_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/setting_rightpanel_item_content_margin_left"
+                            android:text="@string/setting_language_en"
+                            android:textColor="@color/setting_rightpanel_detail_color"
+                            android:textSize="@dimen/setting_rightpanel_content_fontsize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/setting_language_en_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/setting_rightpanel_item_disclosure_margin_right"
+                            android:src="@drawable/setting_checkmark" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_rightpanel_navbar_bg" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_rightpanel_shadow" />
+
+            <TextView
+                android:id="@+id/setting_language_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/navbar_title_margintop"
+                android:shadowColor="#000000"
+                android:shadowDy="-1"
+                android:shadowRadius="1"
+                android:text="@string/setting_language_title"
+                android:textColor="@color/navbar_title_textcolor"
+                android:textSize="@dimen/navbar_title_textsize"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+</RelativeLayout>

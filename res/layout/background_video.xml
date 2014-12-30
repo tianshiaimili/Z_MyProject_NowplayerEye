@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/main_layout"
+    >
+	<SurfaceView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_gravity="center"
+		android:id="@+id/surface_view" />
+	
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="8dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+ 		android:progressDrawable="@drawable/seekbar_style"
+		android:thumb="@drawable/selector_thumb"
+		android:layout_gravity="top|center_horizontal" />
+	
+	<FrameLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:id="@+id/bottom_bar_layout">
+		<ImageView
+			android:layout_width="fill_parent"
+			android:layout_height="50dp"
+			android:layout_gravity="bottom"
+			android:scaleType="fitXY"
+			android:background="#ffffff" />
+		<LinearLayout
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:orientation="horizontal" >
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="45dp"
+				android:text="Down"
+				android:padding="5dp"
+				android:layout_weight="1"
+				android:id="@+id/voice_btn_down" />	
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="45dp"
+				android:text="Up"
+				android:padding="5dp"
+				android:layout_weight="1"
+				android:id="@+id/voice_btn_up" />
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="45dp"
+				android:text="Play"
+				android:padding="5dp"
+				android:layout_weight="1"
+				android:id="@+id/play" />
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="45dp"
+				android:text="pause"
+				android:padding="5dp"
+				android:layout_weight="1"
+				android:id="@+id/pause" />
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="45dp"
+				android:text="stop"
+				android:padding="5dp"
+				android:layout_weight="1"
+				android:id="@+id/stop" />
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="45dp"
+				android:text="Screen Mode"
+				android:padding="5dp"
+				android:layout_weight="1"
+				android:id="@+id/mode_btn" />		    
+		</LinearLayout>
+	</FrameLayout>
+</FrameLayout>

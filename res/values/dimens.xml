@@ -1,0 +1,97 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="topbar_lv1_title_size">16sp</dimen>
+    <dimen name="sidebar_icon_title_size">12sp</dimen>
+    <dimen name="topbar_item_min_width">95dp</dimen>
+    <dimen name="topbar_item_height">48dp</dimen>
+    
+    <dimen name="content_table_header_title_textsize">16sp</dimen>
+    <dimen name="content_table_header_padding_top">1dp</dimen>
+    <dimen name="content_table_header_padding_left">24dp</dimen>
+    
+    <dimen name="navbar_title_textsize">16sp</dimen>
+    <dimen name="navbar_title_margintop">12dp</dimen>
+    <dimen name="navbar_btnitem_title_size">14sp</dimen>
+    <dimen name="navbar_btnitem_padding_left_right">12dp</dimen>
+    <dimen name="navbar_btnitem_padding_top_bottom">4dp</dimen>
+    <dimen name="navbar_btnitem_marign_top">8dp</dimen>
+    <dimen name="navbar_right_btnitem_marign_right">8dp</dimen>
+    <dimen name="navbar_left_btnitem_marign_left">16dp</dimen>
+    
+    
+    
+    <dimen name="program_thumbnail_title_textsize">12sp</dimen>
+    <dimen name="program_thumbnail_title_margin_top">4dp</dimen>
+    <dimen name="program_thumbnail_margin_top">0dp</dimen>
+	<dimen name="program_thumbnail_margin_bottom">0dp</dimen>
+	<dimen name="program_thumbnail_margin_left">20dp</dimen>
+	<dimen name="program_thumbnail_margin_right">20dp</dimen>
+	<dimen name="programdetail_title_size">20sp</dimen>
+	<dimen name="programdetail_content_size">14sp</dimen>
+	<dimen name="programdetail_content_size_large">16sp</dimen>
+	<dimen name="programdetail_content_margin">30dp</dimen>
+	<dimen name="programdetail_content_row_margin">10dp</dimen>
+	
+	<dimen name="live_currentprogram_title">16sp</dimen>
+	<dimen name="live_currentprogram_time">12sp</dimen>
+	<dimen name="live_currentprogram_rowheight">96dp</dimen>
+	<dimen name="live_listitem_height">98dp</dimen>
+	<dimen name="live_currentprogram_rowpadding">12dp</dimen>
+	<dimen name="live_currentprogram_height_marginbtm">-16dp</dimen>
+	<dimen name="live_currentprogram_playarrow_marginright">12dp</dimen>
+	<dimen name="live_currentprogram_title_margintop">0dp</dimen>
+	<dimen name="live_currentprogram_title_marginright">24dp</dimen>
+	<dimen name="live_currentprogram_time_margintop">6dp</dimen>
+    <dimen name="live_currentprogram_logo_margin_right">45dp</dimen>
+    
+    
+    <dimen name="live_fullepg_timeline_current_time">900dp</dimen>
+        
+    <dimen name="live_fullepg_timeline_30min_width">240dp</dimen>
+    <dimen name="live_fullepg_timeline_now_anchor_left_margin">60dp</dimen>
+    <dimen name="live_fullepg_timeline_slider_group_epg_open_rightmargin">85dp</dimen>
+    <dimen name="live_fullepg_timeline_slider_rightMargin">-40dp</dimen>
+    <dimen name="live_fullepg_timeline_slider_rightMargin_open">-80dp</dimen>
+    <dimen name="live_fullepg_timeline_openorclose_determine">-120dp</dimen>
+    
+    <dimen name="live_fullepg_timeline_fontsize">10sp</dimen>
+    <dimen name="live_fullepg_timeline_margin_top">12dp</dimen>
+    <dimen name="live_fullepg_timeline_time_margin_top">2dp</dimen>
+    
+    
+    <dimen name="live_fullepg_program_bg_margin_top">4dp</dimen>
+    <dimen name="live_fullepg_program_title_margin_left">14dp</dimen>
+    <dimen name="live_fullepg_program_title_margin_top">14dp</dimen>
+    <dimen name="live_fullepg_program_title_margin_right">8dp</dimen>
+    <dimen name="live_fullepg_program_time_margin_top">4dp</dimen>
+    <dimen name="live_fullepg_program_title_fontsize">12sp</dimen>
+    <dimen name="live_fullepg_program_time_fontsize">12sp</dimen>
+    <dimen name="live_fullepg_anchor_margin_top">8dp</dimen>
+    <dimen name="live_fullepg_anchor_margin_left">0dp</dimen>
+    <dimen name="live_fullepg_anchor_margin_right">34dp</dimen>
+    
+    <dimen name="setting_leftpanel_btn_textsize">16sp</dimen>
+    <dimen name="setting_leftpanel_btn_text_margin_left">32dp</dimen>
+    <dimen name="setting_leftpanel_btn_arrow_margin_right">16dp</dimen>
+    
+    <dimen name="setting_rightpanel_content_fontsize">16sp</dimen>
+    <dimen name="setting_rightpanel_second_content_fontsize">14sp</dimen>
+    
+    <dimen name="setting_rightpanel_margin_right">32dp</dimen>
+    <dimen name="setting_rightpanel_margin_top">16dp</dimen>
+    <dimen name="setting_rightpanel_title_margin_left">48dp</dimen>
+    <dimen name="setting_rightpanel_item_height">48dp</dimen>
+    <dimen name="setting_rightpanel_item_margin_left">32dp</dimen>
+    <dimen name="setting_rightpanel_item_content_margin_left">16dp</dimen>
+    <dimen name="setting_rightpanel_item_disclosure_margin_right">16dp</dimen>
+    <dimen name="setting_rightpanel_item_detail_margin_right">12dp</dimen>
+    
+    
+    <dimen name="logon_dialog_button_titlesize">16sp</dimen>
+   
+    
+	
+</resources>

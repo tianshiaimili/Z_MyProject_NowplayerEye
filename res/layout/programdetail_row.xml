@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="@dimen/programdetail_content_row_margin"
+	    android:layout_marginLeft="@dimen/programdetail_content_margin"
+	    android:layout_marginRight="@dimen/programdetail_content_margin"
+	    android:layout_marginTop="@dimen/programdetail_content_row_margin" >
+	
+	    <TextView
+	        android:id="@+id/program_row_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:text="第一集"
+	        android:textColor="@color/programdetail_content"
+	        android:textSize="@dimen/programdetail_content_size"
+	        android:layout_toLeftOf="@+id/program_row_classification"
+	        android:layout_alignParentLeft="true"
+	        android:textStyle="bold" />
+
+
+	    
+	    	
+	    <ImageButton
+	        android:id="@+id/program_row_play_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:background="@drawable/play_btn_bg"
+	        android:paddingBottom="0dp"
+	        android:paddingTop="0dp"
+	        android:scaleType="center"
+	        android:src="@drawable/play_btn_arrow" />
+	
+
+	    <ImageView
+	        android:id="@+id/program_row_classification"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="12dp"
+	        android:layout_toLeftOf="@id/program_row_play_btn"
+	        android:src="@drawable/classification_iii" />  
+
+	</RelativeLayout>
+	
+	<ImageView
+			android:id="@+id/program_row_seperator"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/programdetail_content_margin"
+			android:layout_marginRight="@dimen/programdetail_content_margin"
+			android:scaleType="fitXY"
+			android:src="@drawable/separator_white" />
+	
+</LinearLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:background="@drawable/main_frame_bg_repeat"
+      tools:context=".MainTabletActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+      <RelativeLayout
+        android:id="@+id/sidebar"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/sidebar_bg" >
+
+        <ImageView
+            android:id="@+id/sidebar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sidebar_logo"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/sidebar_bottom_btns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/sidebar_bg"
+            android:orientation="vertical" >
+
+            
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/separator"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:id="@+id/Sidebar_btn_setting"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:tag="small" >
+
+                <ImageView
+                    android:id="@+id/Sidebar_btn_setting_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:tag="bg" />
+
+                <ImageButton
+                    android:id="@+id/Sidebar_btn_setting_imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:background="@null"
+                    android:src="@drawable/sidebar_icon_setting"
+                    android:tag="btn"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/sidebar_category_scrollview"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/sidebar_bottom_btns"
+            android:layout_below="@id/sidebar_logo"
+            android:scrollbars="vertical|none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/sidebar_category_lo"
+                android:scrollbars="none" >
+
+                <RelativeLayout
+                    android:id="@+id/Sidebar_btn_live"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:clipChildren="false"
+                    android:visibility="gone"
+                    android:clipToPadding="false"
+                    android:tag="big" >
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="center"
+                        android:src="@null"
+                        android:tag="bg" />
+
+                    <ImageButton
+                        android:id="@+id/Sidebar_btn_live_ImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/sidebar_icon_live"
+                        android:tag="btn" />
+
+                    <TextView
+                        android:id="@+id/sidebar_channel_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="5dp"
+                        android:tag="title"
+                        android:text="@string/sidebar_channel"
+                        android:textColor="@color/sidebar_icon_title_color"
+                        android:textSize="@dimen/sidebar_icon_title_size"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Sidebar_btn_program"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="90dp"
+                    android:tag="big" >
+
+                    <ImageView
+                        android:id="@+id/ImageView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="center"
+                        android:tag="bg" />
+
+                    <ImageButton
+                        android:id="@+id/Sidebar_btn_program_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/sidebar_icon_channel"
+                        android:tag="btn" />
+
+                    <TextView
+                        android:id="@+id/sidebar_program_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="5dp"
+                        android:tag="title"
+                        android:text="@string/sidebar_program"
+                        android:textColor="@color/sidebar_icon_title_color"
+                        android:textSize="@dimen/sidebar_icon_title_size"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+             
+               <!-- add a new Multicast Highlight -->
+               
+                <RelativeLayout
+                    android:id="@+id/Sidebar_btn_program2"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="90dp"
+                    android:tag="big" >
+
+                    <ImageView
+                        android:id="@+id/ImageView02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="center"
+                        android:tag="bg" />
+
+                    <ImageButton
+                        android:id="@+id/Sidebar_btn_program_imageButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/sidebar_icon_channel"
+                        android:tag="btn" />
+
+                    <TextView
+                        android:id="@+id/sidebar_program_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="5dp"
+                        android:tag="title"
+                        android:text="@string/sidebar_program"
+                        android:textColor="@color/sidebar_icon_title_color"
+                        android:textSize="@dimen/sidebar_icon_title_size"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    
+       <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@+id/sidebar"
+        android:clipChildren="false"
+        android:clipToPadding="false" >
+        
+            <View
+            android:id="@+id/helperview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+           
+           </FrameLayout>
+      
+
+</RelativeLayout>

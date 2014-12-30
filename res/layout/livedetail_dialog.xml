@@ -1,0 +1,67 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="590dp"
+    android:layout_height="274dp"
+>
+<RelativeLayout 
+    android:layout_width="590dp"
+    android:layout_height="274dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/live_program_detail_bg" >
+
+    <ImageView
+        android:id="@+id/livedetail_logo"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="48dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/_channel_logo" />
+
+    <TextView
+        android:id="@+id/livedetail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="232dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        android:lines="2"
+        android:text="Wimbledon Women Semi-Final:Sharapova vs Serena William"
+        android:textColor="@color/live_detail_title_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/livedetail_channel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/livedetail_title"
+        android:layout_below="@id/livedetail_title"
+        android:layout_marginTop="16dp"
+        android:text="Ch 636 now Sports HD"
+        android:textColor="@color/live_detail_content_color"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/livedetail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/livedetail_title"
+        android:layout_below="@id/livedetail_channel"
+        android:layout_marginTop="2dp"
+        android:text="30 June (Fri) 10.30PM - 11.45PM"
+        android:textColor="@color/live_detail_content_color"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    
+    <TextView 
+    android:layout_width="590dp"
+    android:layout_height="274dp"/>
+
+</RelativeLayout>
+</LinearLayout>

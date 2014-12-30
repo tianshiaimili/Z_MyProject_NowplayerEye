@@ -1,0 +1,14 @@
+{
+	"imageDomain": "http://images.now-tv.com",
+	"region": "HK",
+	"tabConfig": ["Live","Programs","VideoExpress","Movie","Service Notice","Setting"],
+	"verimatrixHost": "219.76.111.64",
+	"catalogueDomain": "https://dl.dropboxusercontent.com/u/6923693/nmal_app/zip",
+	
+	"allowedVersion": "1.3",
+	"longPlayPrompt": "180",
+	"serviceNoticeURL": "http://nowplayer.now.com/public/mobile/androidhelp/index[lang].html",
+	"relatedAppURL": " http://nowplayer.now.com/public/mobile/04/relatedApp/[lang]/relatedapp.html",
+	"forceUpdateVersion": "1.3",
+	"mode": "review"
+}

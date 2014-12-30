@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg_repeat"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,ContentDescription,UselessLeaf" >
+
+    <RelativeLayout
+        android:id="@+id/sidebar"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/sidebar_bg" >
+
+        <ImageView
+            android:id="@+id/sidebar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sidebar_logo"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/sidebar_bottom_btns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/sidebar_bg"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/separator"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:src="@drawable/sidebar_icon_setting"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/sidebar_bottom_btns"
+            android:layout_below="@id/sidebar_logo"
+            android:scrollbars="vertical|none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:scrollbars="none" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false" >
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="center"
+                        android:src="@drawable/sidebar_icon_pointer" />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/sidebar_icon_live_active" />
+
+                    <TextView
+                        android:id="@+id/TextView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="5dp"
+                        android:text="頻道"
+                        android:textColor="@color/sidebar_icon_title_color_active"
+                        android:textSize="@dimen/sidebar_icon_title_size"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="center" />
+
+                    <ImageButton
+                        android:id="@+id/LiveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/sidebar_icon_channel" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="5dp"
+                        android:text="自選節目"
+                        android:textColor="@color/sidebar_icon_title_color"
+                        android:textSize="@dimen/sidebar_icon_title_size"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/sidebar" >
+
+    </RelativeLayout>
+
+</RelativeLayout>

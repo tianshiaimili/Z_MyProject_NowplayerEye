@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/program_session_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/content_table_header_bg"
+        android:paddingLeft="@dimen/content_table_header_padding_left"
+        android:paddingTop="@dimen/content_table_header_padding_top"
+        android:shadowColor="@color/content_table_header_title_shadowcolor"
+        android:shadowDy="-1"
+        android:shadowRadius="1"
+        android:textColor="@color/content_table_header_title_color"
+        android:textSize="@dimen/content_table_header_title_textsize"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:id="@+id/program_session_horizontalscrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+    </HorizontalScrollView>
+    
+
+</LinearLayout>

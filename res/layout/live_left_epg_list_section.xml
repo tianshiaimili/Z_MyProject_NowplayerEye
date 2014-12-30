@@ -1,0 +1,6 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="23dp"
+    android:layout_marginBottom="@dimen/live_currentprogram_height_marginbtm"
+    android:background="@drawable/content_table_header_bg" />

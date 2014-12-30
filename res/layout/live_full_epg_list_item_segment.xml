@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="240dp"
+    android:layout_height="86dp"
+    android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+    android:background="@drawable/live_epg_program_bg" >
+
+    <TextView
+        android:id="@+id/live_full_epg_item_segment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+        android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+        android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+        android:maxLines="2"
+        android:minLines="1"
+        android:textColor="@color/live_fullepg_program_title_color"
+        android:textSize="@dimen/live_fullepg_program_title_fontsize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/live_full_epg_item_segment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/live_full_epg_item_segment_title"
+        android:layout_below="@id/live_full_epg_item_segment_title"
+        android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+        android:lines="1"
+        android:textColor="@color/live_fullepg_program_time_color"
+        android:textSize="@dimen/live_fullepg_program_time_fontsize"
+        android:textStyle="bold" />
+
+</RelativeLayout>

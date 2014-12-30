@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+     <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/main_frame_bg_dark_repeat" >
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/setting_rightpanel_title_margin_left"
+                        android:layout_marginRight="@dimen/setting_rightpanel_margin_right"
+                        android:layout_marginTop="@dimen/setting_rightpanel_margin_top"
+                        android:text="now ID account"
+                        android:textColor="@color/setting_rightpanel_content_color"
+                        android:textSize="@dimen/setting_rightpanel_content_fontsize"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/setting_rightpanel_item_height"
+                        android:layout_marginLeft="@dimen/setting_rightpanel_item_margin_left"
+                        android:layout_marginRight="@dimen/setting_rightpanel_margin_right"
+                        android:layout_marginTop="@dimen/setting_rightpanel_margin_top"
+                        android:background="@drawable/setting_itemrow_bg"
+                        android:padding="0dp" >
+
+                        <TextView
+                            android:id="@+id/TextView03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/setting_rightpanel_item_content_margin_left"
+                            android:text="Account"
+                            android:textColor="@color/setting_rightpanel_content_color"
+                            android:textSize="@dimen/setting_rightpanel_content_fontsize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ImageView03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/setting_rightpanel_item_disclosure_margin_right"
+                            android:src="@drawable/setting_disclosurearrow_light" />
+
+                        <TextView
+                            android:id="@+id/TextView05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/setting_rightpanel_item_detail_margin_right"
+                            android:layout_toLeftOf="@+id/ImageView03"
+                            android:text="username@email.com"
+                            android:textColor="@color/setting_rightpanel_detail_color"
+                            android:textSize="@dimen/setting_rightpanel_content_fontsize"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView08"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/setting_rightpanel_margin_top"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/setting_rightpanel_title_margin_left"
+                        android:layout_marginRight="@dimen/setting_rightpanel_margin_right"
+                        android:layout_marginTop="@dimen/setting_rightpanel_margin_top"
+                        android:text="now TV account"
+                        android:textColor="@color/setting_rightpanel_content_color"
+                        android:textSize="@dimen/setting_rightpanel_content_fontsize"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/setting_rightpanel_item_height"
+                        android:layout_marginLeft="@dimen/setting_rightpanel_item_margin_left"
+                        android:layout_marginRight="@dimen/setting_rightpanel_margin_right"
+                        android:layout_marginTop="@dimen/setting_rightpanel_margin_top"
+                        android:background="@drawable/setting_itemrow_bg"
+                        android:padding="0dp" >
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/setting_rightpanel_item_content_margin_left"
+                            android:text="now TV 解碼器"
+                            android:textColor="@color/setting_rightpanel_content_color"
+                            android:textSize="@dimen/setting_rightpanel_content_fontsize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/setting_rightpanel_item_disclosure_margin_right"
+                            android:src="@drawable/setting_disclosurearrow_light" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/setting_rightpanel_item_detail_margin_right"
+                            android:layout_toLeftOf="@id/imageView8"
+                            android:text="未連結"
+                            android:textColor="@color/setting_rightpanel_detail_color"
+                            android:textSize="@dimen/setting_rightpanel_content_fontsize"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/setting_rightpanel_item_margin_left"
+                        android:layout_marginRight="@dimen/setting_rightpanel_margin_right"
+                        android:layout_marginTop="@dimen/setting_rightpanel_margin_top"
+                        android:gravity="center_horizontal"
+                        android:text="以同時在電腦上享受 now TV 服務，如 now影視點播站、ESPN Player"
+                        android:textColor="@color/setting_rightpanel_content_color"
+                        android:textSize="@dimen/setting_rightpanel_second_content_fontsize" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/setting_rightpanel_margin_top"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_rightpanel_navbar_bg" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_rightpanel_shadow" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/navbar_title_margintop"
+                android:shadowColor="#000000"
+                android:shadowDy="-1"
+                android:shadowRadius="1"
+                android:text="Now ID"
+                android:textColor="@color/navbar_title_textcolor"
+                android:textSize="@dimen/navbar_title_textsize"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/navbar_right_btnitem_marign_right"
+                android:layout_marginTop="@dimen/navbar_btnitem_marign_top"
+                android:background="@drawable/navitembtn_bg_status"
+                android:paddingBottom="@dimen/navbar_btnitem_padding_top_bottom"
+                android:paddingLeft="@dimen/navbar_btnitem_padding_left_right"
+                android:paddingRight="@dimen/navbar_btnitem_padding_left_right"
+                android:paddingTop="@dimen/navbar_btnitem_padding_top_bottom"
+                android:shadowColor="#000000"
+                android:shadowDy="-1"
+                android:shadowRadius="1"
+                android:text="Logout"
+                android:textColor="@color/navbar_btnitem_title_color"
+                android:textSize="@dimen/navbar_btnitem_title_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+</RelativeLayout>

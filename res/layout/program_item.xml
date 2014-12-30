@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+    android:paddingLeft="@dimen/program_thumbnail_margin_left"
+    android:paddingRight="@dimen/program_thumbnail_margin_right"
+    android:layout_marginTop="@dimen/program_thumbnail_margin_top" >
+
+    <ImageView
+        android:id="@+id/program_item_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/empty_program_b" />
+
+    <ImageView
+        android:id="@+id/program_item_image"
+        android:layout_width="166dp"
+        android:layout_height="122dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/program_item_title"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/program_item_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+        android:gravity="center_horizontal"
+        android:lines="2"
+        android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+        android:textSize="@dimen/program_thumbnail_title_textsize"
+        android:textStyle="bold" />
+
+</RelativeLayout>

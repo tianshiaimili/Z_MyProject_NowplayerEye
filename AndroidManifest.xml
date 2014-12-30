@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pccw.nowplayereyeapp"
+    android:versionCode="6"
+    android:versionName="1.5.0.58814" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+    
+ 	<!-- Permission for Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permission for Network -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />    
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	
+	
+	<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    
+    
+    
+    <!-- Add by martin -->
+    <permission android:name="com.pccw.nowplayereyeapp.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.pccw.nowplayereyeapp.permission.C2D_MESSAGE" /> 
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- App receives GCM messages. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    
+    <application
+        android:allowBackup="true" 
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.pccw.nowplayereyeapp.NowPlayerApplication" >
+        
+        <activity
+            android:name=".SplashActivity"
+              android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <!--for activity, above 3.2 API13 will need "screenSize"this . or not press home button then,lock screen will run onCreate() again. 
+            android:configChanges="orientation|screenSize"
+            -->
+        <activity
+            android:name="com.pccw.nowplayer.MainTabletActivity"
+              android:configChanges="orientation|screenSize" android:screenOrientation="sensorLandscape">
+        </activity>
+        
+        
+		<activity
+            android:name="com.pccw.nowplayer.app.VODPlayerActivity"
+              android:configChanges="orientation|screenSize" android:screenOrientation="sensorLandscape">
+        </activity>
+        		<activity
+            android:name="com.pccw.nowplayer.TutorialActivity"
+              android:configChanges="orientation|screenSize" android:screenOrientation="sensorLandscape">
+        </activity>
+
+         <activity
+            android:name="com.pccw.android.ad.view.AdWebViewActivity"
+              android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape">
+        </activity>
+     <service android:name=".notification.MyNotificationService" >
+            	<intent-filter>
+					<action
+						android:name=".notification.MyNotificationService" />
+				</intent-filter>		            
+        </service>
+        
+     <!-- android.intent.category.HOME 设置该Activity随系统启动而运行 
+     android.intent.action.BOOT_COMPLETED  设置开机启动 
+     -->
+        <receiver android:name=".notification.MyNotificationStartupReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".notification.MyGCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.pccw.nowplayereyeapp" />
+            </intent-filter>
+        </receiver>
+        
+        <activity
+            android:name="com.pccw.common.notification.NotificationDialogActivity"
+            android:theme="@android:style/Theme.Dialog" android:taskAffinity="" android:excludeFromRecents="true"         
+            />
+        
+    </application>
+
+    
+   
+    
+</manifest>

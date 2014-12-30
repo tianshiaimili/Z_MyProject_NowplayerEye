@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <SurfaceView
+        android:id="@+id/vod_video_surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <ImageButton
+        android:id="@+id/vod_player_btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:src="@drawable/live_player_play_btn" />
+
+    <LinearLayout
+        android:id="@+id/vod_popupTool"
+        android:layout_width="fill_parent"
+        android:layout_height="88dp"
+        android:layout_gravity="bottom"
+        android:background="#75000000"
+        android:orientation="vertical"
+        android:paddingLeft="84dp"
+        android:visibility="gone"
+    >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <SeekBar
+                android:id="@+id/vod_popupTool_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="8dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:thumb="@drawable/selector_thumb"
+             />
+
+            <LinearLayout
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/vod_popup_duration_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    
+                    android:text="@string/live"
+                    android:textColor="#ff6699CC" />
+
+                <TextView
+                    android:id="@+id/vod_popup_duration_seperate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="/"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/vod_popup_duration_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/vod_popupTool_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_playerbar_pause" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/_seperator" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/vod_popupTool_logo"
+                    android:layout_width="102dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:scaleType="fitCenter"
+                	android:src="@drawable/channel_logo"    
+				/>
+
+                <TextView
+                    android:id="@+id/vod_popupTool_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/vod_popupTool_logo"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/_seperator" />
+
+            <Button
+                android:id="@+id/vod_popupTool_exit_fullscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_playerbar_enterfullscreen" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

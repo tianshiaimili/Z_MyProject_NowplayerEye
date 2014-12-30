@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">now 之選</string>
+    <string name="action_settings">設定</string>
+    <string name="hello_world">Hello world!</string>
+ 	<string name="logon_text_zh">享受全面\nnowplayer 體驗</string>
+ 	<string name="logon_text_en">Enjoy now TV for free\nwith now player App</string>
+ 	<string name="notification_cancel">關閉</string>
+ 	<string name="notification_view">開啟</string>
+ 	
+ 	<string name="setting_title">設定</string>
+ 	<string name="setting_language">Language</string>
+ 	<string name="setting_push_alert">推播功能</string>
+ 	<string name="setting_service_notice">服務提示</string>
+ 	<string name="setting_back_button">返回</string>
+ 	
+ 	<string name="setting_language_title">語言</string>
+ 	<string name="setting_push_alert_title">推播功能</string>
+ 	<string name="setting_recevice_push_alert">推播功能</string>
+ 	<string name="setting_service_notice_title">服務提示</string>
+ 	<string name="setting_related_app">相關程式</string>
+ 	
+ 	<string name="sidebar_channel">直播</string>
+ 	<string name="sidebar_program">節目精華</string>
+ 	<string name="sidebar_multicast">自制節目</string>
+ 	<string name="sidebar_multicast_bar_title">自制節目區</string>
+ 	
+	<!-- config -->
+	<string name="load_config_server_error">服務器錯誤</string>
+	<string name="load_config_network_unavailable">網絡連接錯誤</string>
+	
+	<!-- quit app confirm -->
+	<string name="quit_app_confirm">[TBD]-這會關閉 now 播放器！</string>
+	
+	 <!-- dialog -->
+    <string name="ok">確定</string>
+    <string name="cancel">取消</string>
+    <string name="close">關閉</string>
+    <string name="loading">載入中...</string>
+    <string name="warning">警告</string>
+    <string name="quality_alert_msg">注意: 影片的聲音和畫面質素，會根據流動裝置的網絡連線速度而有所影響。如影片出現"起格"或畫面不同步，請檢查您的網絡連線。</string>
+    <string name="tnc_title">now之選 on eye條款及條件</string>
+    <string name="tnc_agree">接受</string>
+    <string name="tnc_deny">取消</string> 
+    
+    <!-- splash -->
+    <string name="force_update_dialog_title">版本更新</string>
+    <string name="force_update_dialog_message">此程式提供最新版本, 需要更新程式?</string>
+    <string name="force_update_dialog_positive">取消</string>
+    <string name="force_update_dialog_negative">更新</string>
+    
+    <string name="remind_update_dialog_title">應用更新提示</string>
+    <string name="remind_update_dialog_message">有新版本，是否更新?</string>
+    <string name="remind_update_dialog_positive">稍後提醒我</string>
+    <string name="remind_update_dialog_negative">更新應用</string>
+    
+    <string name="version">版本</string>
+    
+    
+    <string name="error_title">抱歉!</string>
+    <string name="error_concurrent_play">每位 eye 客戶只可同時間於now 之選 on eye 觀看一個直播頻道/自選節目，請稍後再試。</string>
+    <string name="error_home_wifi_only">您正在使用之Wi-Fi網絡連線不能播放所選頻道。 想隨時隨地收看now觀星台及更多now TV體育、電影、綜藝娛樂及兒童節目？ 立即訂購，成為 now TV客戶！請致電申請專線28881888後按2，訂購now TV服務及now觀星台，即可以 now 隨身收看此頻道。</string>
+    <string name="error_geo_block">now 之選 on eye服務暫時不能在您所在的地區進行播放。</string>
+    <string name="error_general_error">系統現正繁忙, 請稍後再試。</string>
+    <string name="error_need_subscribed">即將推出，請密切留意！</string> <!-- 您尚未訂購所選之直播頻道/自選節目，請致電2888 1888(後按3)申請。 -->
+    <string name="error_coming_soon">即將推出，請密切留意！</string>
+    <string name="error_invalid_token">您的帳戶並未授權使用now 之選 on eye 服務，請致電2888 1888(後按3)查詢。</string>
+    <string name="error_service_forbidden">您的帳戶並未授權使用now 之選 on eye 服務，請致電2888 1888(後按3)查詢。</string>
+    
+    <!-- live -->
+    <string name="dialog_select_quality">請選擇影片質素︰</string>
+    <string name="dialog_select_audio">請選擇</string>
+    <string name="live">LIVE</string>
+    
+    <string name="quality_high">高</string>
+    <string name="quality_medium">中</string>
+    <string name="quality_low">低</string>
+    
+    <string name="long_play_prompt_continue">繼續</string>
+    <string name="long_play_prompt_hint">繼續播放?</string>
+    
+	<!-- program highlight -->
+     <string name="program_detail_episode_title">片集</string>
+    <string name="programdetail_language_title">語言 : </string>
+    <string name="programdetail_language"></string>
+    
+	<string name="alert_end_of_program_title">節目完畢</string>
+	<string name="alert_end_of_program_message">節目已播放完畢。</string>
+    
+    	<!-- genre tabbar -->
+    <string name="vod.tabbar.all">全部</string>
+    
+    <string name="error_system_maintenance">系統更新，請稍後再試</string>
+    
+
+    
+    
+</resources>

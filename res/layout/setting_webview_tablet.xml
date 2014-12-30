@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/main_frame_bg_dark_repeat" >
+    
+
+     <RelativeLayout
+         android:id="@+id/setting_webview_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_frame_bg_dark_repeat"
+                android:orientation="vertical"
+                android:layout_marginTop="48dp" >
+                
+                <ProgressBar
+			        android:id="@+id/webview_progress"
+			        style="?android:attr/progressBarStyleHorizontal"
+			        android:layout_width="fill_parent"
+			        android:layout_height="3dp"
+			        android:gravity="top"
+			        android:visibility="invisible" />
+		            
+		          <WebView 
+		         android:id="@+id/setting__webview"
+		         android:layout_width="match_parent"
+		         android:layout_height="0dp"
+		         android:layout_weight="1"
+		         
+		         />
+		            
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_rightpanel_navbar_bg" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_rightpanel_shadow" />
+
+            <TextView
+                android:id="@+id/setting_webview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/navbar_title_margintop"
+                android:shadowColor="#000000"
+                android:shadowDy="-1"
+                android:shadowRadius="1"
+                android:text="@string/setting_webview_title"
+                android:textColor="@color/navbar_title_textcolor"
+                android:textSize="@dimen/navbar_title_textsize"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/setting_right_back_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/navbar_left_btnitem_marign_left"
+                android:background="@drawable/navitembtn_bg_status"
+                android:paddingBottom="@dimen/navbar_btnitem_padding_top_bottom"
+                android:paddingLeft="@dimen/navbar_btnitem_padding_left_right"
+                android:paddingRight="@dimen/navbar_btnitem_padding_left_right"
+                android:paddingTop="@dimen/navbar_btnitem_padding_top_bottom"
+                android:shadowColor="#000000"
+                android:shadowDy="-1"
+                android:shadowRadius="1"
+                android:text="@string/setting_back_button"
+                android:textColor="@color/navbar_btnitem_title_color"
+                android:textSize="@dimen/navbar_btnitem_title_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+       
+    
+     
+    
+</RelativeLayout>

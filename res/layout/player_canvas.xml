@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="350dp" >
+
+    <SurfaceView
+        android:id="@+id/live_video_surfaceview"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_gravity="center" />
+
+    <custom.widget.FitWidthImageView
+        android:id="@+id/live_player_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:src="@drawable/live_play_idle_bg" />
+
+    <ImageButton
+        android:id="@+id/live_player_full_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:src="@drawable/live_player_fullscreen_btn"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/live_player_btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:src="@drawable/live_player_play_btn" />
+
+    <LinearLayout
+        android:id="@+id/popupTool"
+        android:layout_width="fill_parent"
+        android:layout_height="88dp"
+        android:layout_gravity="bottom"
+        android:background="#75000000"
+        android:orientation="vertical"
+        android:paddingLeft="84dp"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <SeekBar
+                android:id="@+id/popupTool_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="8dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:thumb="@drawable/selector_thumb"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/popup_duration_now"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/live"
+                    android:textColor="#ff6699CC" />
+
+                <TextView
+                    android:id="@+id/popup_duration_seperate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="/"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/popup_duration_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/popupTool_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_playerbar_play" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/_seperator" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/popupTool_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:paddingRight="15dp" />
+
+                <TextView
+                    android:id="@+id/popupTool_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/popupTool_logo"
+                    android:singleLine="true"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/popupTool_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/popupTool_title"
+                    android:layout_toRightOf="@+id/popupTool_logo" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/_seperator" />
+
+            <Button
+                android:id="@+id/popupTool_exit_fullscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_playerbar_exitfullscreen" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,3011 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg_repeat"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,ContentDescription,SelectableText,TooManyViews,ObsoleteLayoutParam" >
+
+    <RelativeLayout
+        android:id="@+id/sidebar"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/sidebar_bg" >
+
+        <ImageView
+            android:id="@+id/sidebar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sidebar_logo"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/sidebar_bottom_btns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/sidebar_bg"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/separator"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/ImageView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY" />
+
+                <ImageButton
+                    android:id="@+id/ImageButton28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:background="@null"
+                    android:src="@drawable/sidebar_icon_setting"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/sidebar_bottom_btns"
+            android:layout_below="@id/sidebar_logo"
+            android:scrollbars="vertical|none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:scrollbars="none" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false" >
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="center"
+                        android:src="@drawable/sidebar_icon_pointer" />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/sidebar_icon_live_active" />
+
+                    <TextView
+                        android:id="@+id/TextView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="5dp"
+                        android:text="頻道"
+                        android:textColor="@color/sidebar_icon_title_color_active"
+                        android:textSize="@dimen/sidebar_icon_title_size"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="center" />
+
+                    <ImageButton
+                        android:id="@+id/LiveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/sidebar_icon_channel" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="5dp"
+                        android:text="自選節目"
+                        android:textColor="@color/sidebar_icon_title_color"
+                        android:textSize="@dimen/sidebar_icon_title_size"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/live_canvas"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/sidebar"
+        android:clipChildren="false"
+        android:clipToPadding="false" >
+
+        <View
+            android:id="@+id/helperview"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/live_player_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/helperview"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/player_canvas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <com.pccw.nowplayer.AspectRatioImageView
+                    android:id="@+id/live_player_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/live_play_idle_bg" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:src="@drawable/live_player_play_btn" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/live_player_bg"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:src="@drawable/live_player_fullscreen_btn" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/current_ch_logo"
+                android:layout_width="104dp"
+                android:layout_height="64dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/player_canvas"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/_channel_logo" />
+
+            <TextView
+                android:id="@+id/current_ch_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/current_ch_logo"
+                android:layout_below="@id/player_canvas"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@id/current_ch_logo"
+                android:text="now Sports 3"
+                android:textColor="@color/live_text_gray"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/current_program_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/current_ch_title"
+                android:layout_below="@id/current_ch_title"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="12dp"
+                android:text="Premiership week 5: Chelsea vs. Man.Utd"
+                android:textColor="@color/live_text_white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/current_program_title"
+                android:layout_below="@id/current_program_title"
+                android:layout_marginTop="4dp"
+                android:text="9:05 PM - 10:00 PM"
+                android:textColor="@color/live_text_gray"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/epg_slider_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/helperview" >
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/main_frame_bg_repeat" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/live_epg_slider_bg" />
+
+            <ImageView
+                android:id="@+id/epg_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="-40dp"
+                android:clickable="true"
+                android:src="@drawable/live_epg_slider" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/live_epg_slider_mask" />
+
+            <com.pccw.nowplayer.ObservableHorizontalScrollView
+                android:id="@+id/live_fullepg_timelineScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_marginRight="130dp"
+                android:alpha="0"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingLeft="200dp"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/live_fullepg_timeline_30min_width"
+                        android:layout_height="48dp" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_margin_top"
+                            android:text="今日 (週三)"
+                            android:textColor="@color/live_fullepg_timeline_weekday_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textView2"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_time_margin_top"
+                            android:text="10:30 PM"
+                            android:textColor="@color/live_fullepg_timeline_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/live_fullepg_timeline_30min_width"
+                        android:layout_height="48dp" >
+
+                        <TextView
+                            android:id="@+id/TextView32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_margin_top"
+                            android:textColor="@color/live_fullepg_timeline_weekday_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+
+                        <TextView
+                            android:id="@+id/TextView33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView32"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_time_margin_top"
+                            android:text="11:00 PM"
+                            android:textColor="@color/live_fullepg_timeline_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/live_fullepg_timeline_30min_width"
+                        android:layout_height="48dp" >
+
+                        <TextView
+                            android:id="@+id/TextView30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_margin_top"
+                            android:textColor="@color/live_fullepg_timeline_weekday_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+
+                        <TextView
+                            android:id="@+id/TextView31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView30"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_time_margin_top"
+                            android:text="11:30 PM"
+                            android:textColor="@color/live_fullepg_timeline_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/live_fullepg_timeline_30min_width"
+                        android:layout_height="48dp" >
+
+                        <TextView
+                            android:id="@+id/TextView28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_margin_top"
+                            android:text=" 7月28日 (週四)"
+                            android:textColor="@color/live_fullepg_timeline_weekday_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+
+                        <TextView
+                            android:id="@+id/TextView29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView28"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_time_margin_top"
+                            android:text="00:00 AM"
+                            android:textColor="@color/live_fullepg_timeline_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/live_fullepg_timeline_30min_width"
+                        android:layout_height="48dp" >
+
+                        <TextView
+                            android:id="@+id/TextView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_margin_top"
+                            android:textColor="@color/live_fullepg_timeline_weekday_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+
+                        <TextView
+                            android:id="@+id/TextView27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView22"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_time_margin_top"
+                            android:text="00:30 AM"
+                            android:textColor="@color/live_fullepg_timeline_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/live_fullepg_timeline_30min_width"
+                        android:layout_height="48dp" >
+
+                        <TextView
+                            android:id="@+id/TextView20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_margin_top"
+                            android:textColor="@color/live_fullepg_timeline_weekday_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+
+                        <TextView
+                            android:id="@+id/TextView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView20"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_time_margin_top"
+                            android:text="01:00 AM"
+                            android:textColor="@color/live_fullepg_timeline_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/live_fullepg_timeline_30min_width"
+                        android:layout_height="48dp" >
+
+                        <TextView
+                            android:id="@+id/TextView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_margin_top"
+                            android:textColor="@color/live_fullepg_timeline_weekday_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+
+                        <TextView
+                            android:id="@+id/TextView19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView18"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_time_margin_top"
+                            android:text="01:30 AM"
+                            android:textColor="@color/live_fullepg_timeline_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/live_fullepg_timeline_30min_width"
+                        android:layout_height="48dp" >
+
+                        <TextView
+                            android:id="@+id/TextView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_margin_top"
+                            android:textColor="@color/live_fullepg_timeline_weekday_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+
+                        <TextView
+                            android:id="@+id/TextView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView14"
+                            android:layout_marginTop="@dimen/live_fullepg_timeline_time_margin_top"
+                            android:text="02:00 AM"
+                            android:textColor="@color/live_fullepg_timeline_textcolor"
+                            android:textSize="@dimen/live_fullepg_timeline_fontsize" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.pccw.nowplayer.ObservableHorizontalScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/current_program_table_right"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="48dp"
+            android:layout_toLeftOf="@id/helperview"
+            android:animateLayoutChanges="true"
+            android:background="@color/live_currentprogram_bg"
+            android:visibility="invisible" >
+
+            <com.pccw.nowplayer.ObservableScrollView
+                android:id="@+id/current_program_table_rightScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="vertical"
+                android:overScrollMode="never"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView17"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/live_currentprogram_height_marginbtm"
+                        android:background="@drawable/content_table_header_bg" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:background="@color/live_currentprogram_selected"
+                        android:clickable="true"
+                        android:paddingBottom="@dimen/live_currentprogram_rowpadding"
+                        android:paddingRight="@dimen/live_currentprogram_playarrow_marginright"
+                        android:paddingTop="@dimen/live_currentprogram_rowpadding" >
+
+                        <TextView
+                            android:id="@+id/TextView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/live_currentprogram_title_marginright"
+                            android:layout_marginTop="@dimen/live_currentprogram_title_margintop"
+                            android:lines="2"
+                            android:text="世界女排大獎賽 2012"
+                            android:textColor="@color/live_text_white"
+                            android:textSize="@dimen/live_currentprogram_title"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TextView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView11"
+                            android:layout_marginTop="@dimen/live_currentprogram_time_margintop"
+                            android:text="9:05 PM - 10:00 PM"
+                            android:textColor="@color/live_text_highlighted"
+                            android:textSize="@dimen/live_currentprogram_time"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ImageView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/live_epg_playarrow" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true"
+                        android:paddingBottom="@dimen/live_currentprogram_rowpadding"
+                        android:paddingRight="@dimen/live_currentprogram_playarrow_marginright"
+                        android:paddingTop="@dimen/live_currentprogram_rowpadding" >
+
+                        <TextView
+                            android:id="@+id/TextView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/live_currentprogram_title_marginright"
+                            android:layout_marginTop="@dimen/live_currentprogram_title_margintop"
+                            android:lines="2"
+                            android:text="世界女排大獎賽 2012世界女排大獎賽 2012世界女排大獎賽 2012世界女排大獎賽 2012"
+                            android:textColor="@color/live_text_white"
+                            android:textSize="@dimen/live_currentprogram_title"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TextView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView10"
+                            android:layout_marginTop="@dimen/live_currentprogram_time_margintop"
+                            android:text="9:05 PM - 10:00 PM"
+                            android:textColor="@color/live_text_gray"
+                            android:textSize="@dimen/live_currentprogram_time"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ImageView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/live_epg_playarrow" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView16"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <TextView
+                        android:id="@+id/TextView24"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/live_currentprogram_height_marginbtm"
+                        android:background="@drawable/content_table_header_bg" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true"
+                        android:paddingBottom="@dimen/live_currentprogram_rowpadding"
+                        android:paddingRight="@dimen/live_currentprogram_playarrow_marginright"
+                        android:paddingTop="@dimen/live_currentprogram_rowpadding" >
+
+                        <TextView
+                            android:id="@+id/TextView09"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/live_currentprogram_title_marginright"
+                            android:layout_marginTop="@dimen/live_currentprogram_title_margintop"
+                            android:lines="2"
+                            android:text="世界女排大獎賽 20122"
+                            android:textColor="@color/live_text_white"
+                            android:textSize="@dimen/live_currentprogram_title"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TextView08"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView09"
+                            android:layout_marginTop="@dimen/live_currentprogram_time_margintop"
+                            android:text="9:05 PM - 10:00 PM"
+                            android:textColor="@color/live_text_gray"
+                            android:textSize="@dimen/live_currentprogram_time"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ImageView08"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/live_epg_playarrow" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView09"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true"
+                        android:paddingBottom="@dimen/live_currentprogram_rowpadding"
+                        android:paddingRight="@dimen/live_currentprogram_playarrow_marginright"
+                        android:paddingTop="@dimen/live_currentprogram_rowpadding" >
+
+                        <TextView
+                            android:id="@+id/TextView07"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/live_currentprogram_title_marginright"
+                            android:layout_marginTop="@dimen/live_currentprogram_title_margintop"
+                            android:lines="2"
+                            android:text="世界女排大獎賽 2012世界女排大獎賽 2012世界女排大獎賽 2012世界女排大獎賽 2012"
+                            android:textColor="@color/live_text_white"
+                            android:textSize="@dimen/live_currentprogram_title"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TextView06"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView07"
+                            android:layout_marginTop="@dimen/live_currentprogram_time_margintop"
+                            android:text="9:05 PM - 10:00 PM"
+                            android:textColor="@color/live_text_gray"
+                            android:textSize="@dimen/live_currentprogram_time"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ImageView06"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/live_epg_playarrow" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView07"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true"
+                        android:paddingBottom="@dimen/live_currentprogram_rowpadding"
+                        android:paddingRight="@dimen/live_currentprogram_playarrow_marginright"
+                        android:paddingTop="@dimen/live_currentprogram_rowpadding" >
+
+                        <TextView
+                            android:id="@+id/TextView05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/live_currentprogram_title_marginright"
+                            android:layout_marginTop="@dimen/live_currentprogram_title_margintop"
+                            android:lines="2"
+                            android:text="世界女排大獎賽 2012"
+                            android:textColor="@color/live_text_white"
+                            android:textSize="@dimen/live_currentprogram_title"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TextView04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView05"
+                            android:layout_marginTop="@dimen/live_currentprogram_time_margintop"
+                            android:text="9:05 PM - 10:00 PM"
+                            android:textColor="@color/live_text_gray"
+                            android:textSize="@dimen/live_currentprogram_time"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ImageView04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/live_epg_playarrow" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView05"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true"
+                        android:paddingBottom="@dimen/live_currentprogram_rowpadding"
+                        android:paddingRight="@dimen/live_currentprogram_playarrow_marginright"
+                        android:paddingTop="@dimen/live_currentprogram_rowpadding" >
+
+                        <TextView
+                            android:id="@+id/TextView03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/live_currentprogram_title_marginright"
+                            android:layout_marginTop="@dimen/live_currentprogram_title_margintop"
+                            android:lines="2"
+                            android:text="世界女排大獎賽 2012世界女排大獎賽 2012世界女排大獎賽 2012世界女排大獎賽 2012"
+                            android:textColor="@color/live_text_white"
+                            android:textSize="@dimen/live_currentprogram_title"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TextView02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TextView03"
+                            android:layout_marginTop="@dimen/live_currentprogram_time_margintop"
+                            android:text="9:05 PM - 10:00 PM"
+                            android:textColor="@color/live_text_gray"
+                            android:textSize="@dimen/live_currentprogram_time"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ImageView02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/live_epg_playarrow" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView03"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                </LinearLayout>
+
+            </com.pccw.nowplayer.ObservableScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/full_epg_canvas"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="48dp"
+            android:layout_toLeftOf="@id/current_program_table_right"
+            android:background="@color/live_fullepg_bg"
+            android:visibility="invisible" >
+
+            <com.pccw.nowplayer.ObservableScrollView
+                android:id="@+id/fullepgScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:fadingEdge="vertical"
+                android:overScrollMode="never"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView23"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/live_currentprogram_height_marginbtm"
+                        android:background="@drawable/content_table_header_bg" />
+
+                    <com.pccw.nowplayer.ObservableHorizontalScrollView
+                        android:id="@+id/fullepg_row_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:background="@color/live_currentprogram_selected"
+                        android:clipToPadding="false"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView118"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView119"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView118"
+                                    android:layout_below="@+id/TextView118"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView46"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView47"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView46"
+                                    android:layout_below="@+id/TextView46"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView42"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView43"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView42"
+                                    android:layout_below="@+id/TextView42"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="480dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView40"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView41"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView40"
+                                    android:layout_below="@+id/TextView40"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView38"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView39"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView38"
+                                    android:layout_below="@+id/TextView38"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView36"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView37"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView36"
+                                    android:layout_below="@+id/TextView36"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView34"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView35"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView34"
+                                    android:layout_below="@+id/TextView34"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="360dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView44"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView45"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView44"
+                                    android:layout_below="@+id/TextView44"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </com.pccw.nowplayer.ObservableHorizontalScrollView>
+
+                    <ImageView
+                        android:id="@+id/ImageView15"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <com.pccw.nowplayer.ObservableHorizontalScrollView
+                        android:id="@+id/fullepg_row_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clipToPadding="false"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView56"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView59"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView56"
+                                    android:layout_below="@+id/TextView56"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView57"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView60"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView57"
+                                    android:layout_below="@+id/TextView57"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView51"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView52"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView51"
+                                    android:layout_below="@+id/TextView51"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="480dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView121"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView50"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView121"
+                                    android:layout_below="@+id/TextView121"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView49"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView48"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView49"
+                                    android:layout_below="@+id/TextView49"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView55"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView58"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView55"
+                                    android:layout_below="@+id/TextView55"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView61"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView120"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView61"
+                                    android:layout_below="@+id/TextView61"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="360dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView53"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView54"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView53"
+                                    android:layout_below="@+id/TextView53"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </com.pccw.nowplayer.ObservableHorizontalScrollView>
+
+                    <ImageView
+                        android:id="@+id/ImageView12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <TextView
+                        android:id="@+id/TextView26"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/live_currentprogram_height_marginbtm"
+                        android:background="@drawable/content_table_header_bg" />
+
+                    <com.pccw.nowplayer.ObservableHorizontalScrollView
+                        android:id="@+id/fullepg_row_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clipToPadding="false"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView70"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView73"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView70"
+                                    android:layout_below="@+id/TextView70"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView71"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView74"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView71"
+                                    android:layout_below="@+id/TextView71"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView65"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView66"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView65"
+                                    android:layout_below="@+id/TextView65"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="480dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView123"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView64"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView123"
+                                    android:layout_below="@+id/TextView123"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView63"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView62"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView63"
+                                    android:layout_below="@+id/TextView63"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView69"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView72"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView69"
+                                    android:layout_below="@+id/TextView69"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView75"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView122"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView75"
+                                    android:layout_below="@+id/TextView75"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="360dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView67"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView68"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView67"
+                                    android:layout_below="@+id/TextView67"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </com.pccw.nowplayer.ObservableHorizontalScrollView>
+
+                    <ImageView
+                        android:id="@+id/ImageView18"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <com.pccw.nowplayer.ObservableHorizontalScrollView
+                        android:id="@+id/fullepg_row_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clipToPadding="false"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView84"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView87"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView84"
+                                    android:layout_below="@+id/TextView84"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView85"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView88"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView85"
+                                    android:layout_below="@+id/TextView85"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView79"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView80"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView79"
+                                    android:layout_below="@+id/TextView79"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="480dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView125"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView78"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView125"
+                                    android:layout_below="@+id/TextView125"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView77"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView76"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView77"
+                                    android:layout_below="@+id/TextView77"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView83"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView86"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView83"
+                                    android:layout_below="@+id/TextView83"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView89"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView124"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView89"
+                                    android:layout_below="@+id/TextView89"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="360dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView81"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView82"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView81"
+                                    android:layout_below="@+id/TextView81"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </com.pccw.nowplayer.ObservableHorizontalScrollView>
+
+                    <ImageView
+                        android:id="@+id/ImageView24"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <com.pccw.nowplayer.ObservableHorizontalScrollView
+                        android:id="@+id/fullepg_row_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clipToPadding="false"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView98"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView101"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView98"
+                                    android:layout_below="@+id/TextView98"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView99"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView102"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView99"
+                                    android:layout_below="@+id/TextView99"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView93"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView94"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView93"
+                                    android:layout_below="@+id/TextView93"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="480dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView127"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView92"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView127"
+                                    android:layout_below="@+id/TextView127"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView91"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView90"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView91"
+                                    android:layout_below="@+id/TextView91"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView97"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView100"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView97"
+                                    android:layout_below="@+id/TextView97"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView103"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView126"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView103"
+                                    android:layout_below="@+id/TextView103"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="360dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView95"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView96"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView95"
+                                    android:layout_below="@+id/TextView95"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </com.pccw.nowplayer.ObservableHorizontalScrollView>
+
+                    <ImageView
+                        android:id="@+id/ImageView22"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <com.pccw.nowplayer.ObservableHorizontalScrollView
+                        android:id="@+id/fullepg_row_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clipToPadding="false"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView112"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView115"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView112"
+                                    android:layout_below="@+id/TextView112"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView113"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView116"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView113"
+                                    android:layout_below="@+id/TextView113"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView107"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView108"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView107"
+                                    android:layout_below="@+id/TextView107"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="480dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView129"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView106"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView129"
+                                    android:layout_below="@+id/TextView129"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView105"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView104"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView105"
+                                    android:layout_below="@+id/TextView105"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView111"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView114"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView111"
+                                    android:layout_below="@+id/TextView111"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="240dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView117"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView128"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView117"
+                                    android:layout_below="@+id/TextView117"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="360dp"
+                                android:layout_height="86dp"
+                                android:layout_marginTop="@dimen/live_fullepg_program_bg_margin_top"
+                                android:background="@drawable/live_epg_program_bg" >
+
+                                <TextView
+                                    android:id="@+id/TextView109"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="@dimen/live_fullepg_program_title_margin_left"
+                                    android:layout_marginRight="@dimen/live_fullepg_program_title_margin_right"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_title_margin_top"
+                                    android:maxLines="2"
+                                    android:minLines="1"
+                                    android:text="天天向上 #59 中華美少女講習所（上）"
+                                    android:textColor="@color/live_fullepg_program_title_color"
+                                    android:textSize="@dimen/live_fullepg_program_title_fontsize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TextView110"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/TextView109"
+                                    android:layout_below="@+id/TextView109"
+                                    android:layout_marginTop="@dimen/live_fullepg_program_time_margin_top"
+                                    android:lines="1"
+                                    android:text="6:30 PM"
+                                    android:textColor="@color/live_fullepg_program_time_color"
+                                    android:textSize="@dimen/live_fullepg_program_time_fontsize"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </com.pccw.nowplayer.ObservableHorizontalScrollView>
+
+                    <ImageView
+                        android:id="@+id/ImageView20"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+                </LinearLayout>
+            </com.pccw.nowplayer.ObservableScrollView>
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/live_epg_program_left_shadow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/live_anchor_now"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/live_fullepg_anchor_margin_top"
+            android:scaleType="fitXY"
+            android:src="@drawable/live_epg_anchor_now"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/current_program_table_left"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="48dp"
+            android:background="@color/live_currentprogram_bg"
+            android:visibility="invisible" >
+
+            <com.pccw.nowplayer.ObservableScrollView
+                android:id="@+id/current_program_table_leftScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="vertical"
+                android:overScrollMode="never"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/live_currentprogram_height_marginbtm"
+                        android:background="@drawable/content_table_header_bg"
+                        android:paddingLeft="@dimen/content_table_header_padding_left"
+                        android:paddingTop="@dimen/content_table_header_padding_top"
+                        android:text="Favorites"
+                        android:textColor="@color/content_table_header_title_color"
+                        android:textSize="@dimen/content_table_header_title_textsize"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:background="@color/live_currentprogram_selected"
+                        android:clickable="true" >
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="104dp"
+                            android:layout_height="64dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/live_currentprogram_logo_margin_right"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/_channel_logo" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView19"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true" >
+
+                        <ImageView
+                            android:id="@+id/ImageView17"
+                            android:layout_width="104dp"
+                            android:layout_height="64dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/live_currentprogram_logo_margin_right"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/_channel_logo" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <TextView
+                        android:id="@+id/TextView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/live_currentprogram_height_marginbtm"
+                        android:background="@drawable/content_table_header_bg"
+                        android:paddingLeft="@dimen/content_table_header_padding_left"
+                        android:paddingTop="@dimen/content_table_header_padding_top"
+                        android:text="Favorites"
+                        android:textColor="@color/content_table_header_title_color"
+                        android:textSize="@dimen/content_table_header_title_textsize"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true" >
+
+                        <ImageView
+                            android:id="@+id/ImageView21"
+                            android:layout_width="104dp"
+                            android:layout_height="64dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/live_currentprogram_logo_margin_right"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/_channel_logo" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView23"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true" >
+
+                        <ImageView
+                            android:id="@+id/ImageView30"
+                            android:layout_width="104dp"
+                            android:layout_height="64dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/live_currentprogram_logo_margin_right"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/_channel_logo" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView29"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true" >
+
+                        <ImageView
+                            android:id="@+id/ImageView28"
+                            android:layout_width="104dp"
+                            android:layout_height="64dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/live_currentprogram_logo_margin_right"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/_channel_logo" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView27"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/live_currentprogram_rowheight"
+                        android:clickable="true" >
+
+                        <ImageView
+                            android:id="@+id/ImageView26"
+                            android:layout_width="104dp"
+                            android:layout_height="64dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/live_currentprogram_logo_margin_right"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/_channel_logo" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ImageView25"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/separator_dark" />
+                </LinearLayout>
+            </com.pccw.nowplayer.ObservableScrollView>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/live_anchor_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/live_fullepg_anchor_margin_left"
+            android:layout_marginTop="@dimen/live_fullepg_anchor_margin_top"
+            android:clickable="true"
+            android:src="@drawable/live_epg_anchor_left"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/live_anchor_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/live_fullepg_anchor_margin_right"
+            android:layout_marginTop="@dimen/live_fullepg_anchor_margin_top"
+            android:clickable="true"
+            android:src="@drawable/live_epg_anchor_right"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:clickable="true"
+        android:src="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="590dp"
+        android:layout_height="274dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/live_program_detail_bg" >
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="48dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/_channel_logo" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="232dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="32dp"
+            android:lines="2"
+            android:text="Wimbledon Women Semi-Final:Sharapova vs Serena William"
+            android:textColor="@color/live_detail_title_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView4"
+            android:layout_below="@id/textView4"
+            android:layout_marginTop="16dp"
+            android:text="Ch 636 now Sports HD"
+            android:textColor="@color/live_detail_content_color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TextView130"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView4"
+            android:layout_below="@id/textView6"
+            android:layout_marginTop="2dp"
+            android:text="30 June (Fri) 10.30PM - 11.45PM"
+            android:textColor="@color/live_detail_content_color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

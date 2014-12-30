@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">now Picks</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+ 	<string name="logon_text_zh">享受全面\nnowplayer 體驗</string>
+ 	<string name="logon_text_en">Enjoy now TV for free\nwith now player App</string>
+ 	<string name="notification_cancel">Close</string>
+ 	<string name="notification_view">Launch</string>
+ 	
+ 	<string name="setting_title">Settings</string>
+ 	<string name="setting_now_id">now ID</string>
+ 	<string name="setting_language">語言</string>
+ 	<string name="setting_push_alert">Push Alert</string>
+ 	<string name="setting_service_notice">Service Notices</string>
+ 	<string name="setting_related_app">Related Apps</string>
+ 	<string name="setting_back_button">Back</string>
+ 	
+ 	<string name="setting_language_title">Language</string>
+ 	<string name="setting_language_zh">中文</string>
+ 	<string name="setting_language_en">English</string>
+ 	<string name="setting_push_alert_title">Push Alert</string>
+ 	<string name="setting_recevice_push_alert">Push Alert</string>
+ 	<string name="setting_service_notice_title">Service Notices</string>
+ 	<string name="setting_webview_title">Welcome</string>
+ 	
+ 	<string name="sidebar_channel">Live</string>
+ 	<string name="sidebar_program">Program Highlight</string>
+ 	<string name="sidebar_multicast">Self Content</string>
+ 	<string name="sidebar_multicast_bar_title">Self Content</string>
+ 	<string name="sidebar_movie">Tab3</string>
+ 	<string name="sidebar_search">Tab4</string>
+ 	
+	<!-- config -->
+	<string name="load_config_server_error">Server error</string>
+	<string name="load_config_network_unavailable">Network unavailable</string>
+	
+	<!-- quit app confirm -->
+	<string name="quit_app_confirm">[TBD]-It will close now player!</string>
+ 	
+	 <!-- dialog -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+    <string name="loading">Loading...</string>
+    <string name="warning">Warning</string>
+     <string name="quality_alert_msg">Note: Video streaming quality depends on your data connection condition and bandwidth availability. If you experience pixellated video or audio/video synchronization problems, please check your network condition.</string>
+    <string name="tnc_title">now Picks on eye Terms and Conditions</string>
+    <string name="tnc_agree">Accept</string>
+    <string name="tnc_deny">Cancel</string> 
+    
+    <!-- splash -->
+    <string name="force_update_dialog_title">Update Now</string>
+    <string name="force_update_dialog_message">Latest version of this app is available, update now?</string>
+    <string name="force_update_dialog_positive">Cancel</string>
+    <string name="force_update_dialog_negative">Update</string>
+    
+    <string name="remind_update_dialog_title">Update Application</string>
+    <string name="remind_update_dialog_message">There is a new version. Update it?</string>
+    <string name="remind_update_dialog_positive">Remind me later</string>
+    <string name="remind_update_dialog_negative">Upgrade App</string>
+    
+    <string name="version">Version</string>
+    
+    <string name="error_title">Sorry!</string>
+    <string name="error_concurrent_play">Each eye user can only watch one steaming channel/on-demand program on now Picks on eye simultaneously. Please try again later.</string>
+    <string name="error_home_wifi_only">This channel is not available with your current Wi-Fi network. To enjoy now Entertainment channel and more fabulous now TV channels anytime and anywhere? Subscribe to now TV service plan now! Call our Sales Hotline 28880008 and press 2 to subscribe now TV service and CH 102 in order to watch the selected channel on the go!</string>
+    <string name="error_geo_block">now Picks on eye service is not available in your current area.</string>
+    <string name="error_general_error">System busy. Please try again later.</string>
+    <string name="error_need_subscribed">Coming soon, please keep an eye on our future update!</string> <!-- You have not subscribed to the selected LIVE Channel/On-Demand Program yet. Please call our sales hotline at 2888 1888 (and press 3) to subscribe. -->
+    <string name="error_coming_soon">Coming soon, please keep an eye on our future update!</string>
+    <string name="error_invalid_token">now Picks on eye service is not authorized for your account. Please call our hotline at 2888 1888 (and press 3) for enquiry.</string>
+    <string name="error_service_forbidden">now Picks on eye service is not authorized for your account. Please call our hotline at 2888 1888 (and press 3) for enquiry.</string>
+    
+    <!-- live -->
+    <string name="dialog_select_quality">Please Select Video Quality:</string>
+    <string name="dialog_select_audio">Please Select</string>
+    <string name="live">LIVE</string>
+    
+    <string name="quality_high">High</string>
+    <string name="quality_medium">Medium</string>
+    <string name="quality_low">Low</string>
+    
+     <string name="long_play_prompt_continue">Continue</string>
+     <string name="long_play_prompt_hint">Long Play Prompt Warning. Continue Play?</string>
+     
+     <!-- program highlight -->
+     <string name="program_detail_episode_title">Episode</string>
+     <string name="programdetail_language_title">Language : </string>
+     <string name="programdetail_language"></string>
+     
+	<string name="alert_end_of_program_title">End of program</string>
+    <string name="alert_end_of_program_message">This is the end of the program.</string>
+     
+     
+	<!-- genre tabbar -->
+    <string name="vod.tabbar.all">All</string>
+    
+    <string name="error_system_maintenance">System under maintenance, please try again later.</string>
+    
+    
+</resources>

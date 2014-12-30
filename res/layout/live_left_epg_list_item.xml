@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/live_listitem_height"
+    android:orientation="vertical" >
+
+    <!-- android:background="@color/live_currentprogram_selected" android:paddingBottom="@dimen/live_currentprogram_rowpadding" -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/live_currentprogram_rowheight"
+        android:paddingRight="@dimen/live_currentprogram_playarrow_marginright"
+        android:paddingTop="@dimen/live_currentprogram_rowpadding"
+        android:background="@drawable/live_list_item_bg_state_list_drawable" >
+
+        <TextView
+            android:id="@+id/live_epg_list_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/live_currentprogram_title_marginright"
+            android:layout_marginTop="@dimen/live_currentprogram_title_margintop"
+            android:lines="2"
+            android:textColor="@color/live_text_white"
+            android:textSize="@dimen/live_currentprogram_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/live_epg_list_item_timeline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/live_epg_list_item_title"
+            android:layout_marginTop="@dimen/live_currentprogram_time_margintop"
+            android:textColor="@color/live_text_white"
+            android:textSize="@dimen/live_currentprogram_time"
+            android:textStyle="bold" />
+
+        <!-- android:src="@drawable/live_epg_playarrow_selected" -->
+        <ImageView
+            android:id="@+id/live_epg_list_item_selected_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/live_epg_playarrow" />
+        
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/separator_dark" />
+
+</LinearLayout>

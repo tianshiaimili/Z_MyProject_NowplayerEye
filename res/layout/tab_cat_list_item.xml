@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" >
+    <RelativeLayout
+                    android:id="@+id/sidebar_list_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:tag="big" >
+
+                    <ImageView
+                        android:id="@+id/sidebar_bg_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:scaleType="center"
+                        android:src="@null"
+                        android:tag="bg" />
+
+                    <ImageButton
+                        android:id="@+id/sidebar_imageButton_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/sidebar_icon_live"
+                        android:tag="btn" />
+
+                    <TextView
+                        android:id="@+id/sidebar_tv_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sidebar_imageButton_item"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="5dp"
+                        android:tag="title"
+                        android:textColor="@color/sidebar_icon_title_color"
+                        android:textSize="@dimen/sidebar_icon_title_size"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+</LinearLayout>

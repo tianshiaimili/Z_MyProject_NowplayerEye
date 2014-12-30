@@ -1,0 +1,31 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/live_listitem_height"
+    android:orientation="vertical" >
+
+    <!-- android:background="@color/live_currentprogram_selected" -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/live_currentprogram_rowheight"
+        android:background="@drawable/live_list_item_bg_state_list_drawable" >
+
+        <ImageView
+            android:id="@+id/live_left_channel_list_image"
+            android:layout_width="104dp"
+            android:layout_height="64dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/live_currentprogram_logo_margin_right"
+            android:scaleType="fitCenter"
+            android:src="@drawable/_channel_logo" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/separator_dark" />
+
+</LinearLayout>

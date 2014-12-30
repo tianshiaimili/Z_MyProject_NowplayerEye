@@ -1,0 +1,1949 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg_repeat"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,ContentDescription" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/sidebar" >
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:clipToPadding="false" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView36"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_table_header_bg"
+                    android:paddingLeft="@dimen/content_table_header_padding_left"
+                    android:paddingTop="@dimen/content_table_header_padding_top"
+                    android:shadowColor="@color/content_table_header_title_shadowcolor"
+                    android:shadowDy="-1"
+                    android:shadowRadius="1"
+                    android:text="新聞財經"
+                    android:textColor="@color/content_table_header_title_color"
+                    android:textSize="@dimen/content_table_header_title_textsize"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView26"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton30"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView26"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView26"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView33"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton31"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView27"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView33"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓白領公寓白領公寓白領公寓白領公寓白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView32"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton28"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:id="@+id/TextView28"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView32"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView31"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton29"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView29"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView31"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView30"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton26"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView30"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView30"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView29"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton27"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView32"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView29"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView28"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton32"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView33"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView28"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView27"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton33"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView31"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView27"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_table_header_bg"
+                    android:paddingLeft="@dimen/content_table_header_padding_left"
+                    android:paddingTop="@dimen/content_table_header_padding_top"
+                    android:shadowColor="@color/content_table_header_title_shadowcolor"
+                    android:shadowDy="-1"
+                    android:shadowRadius="1"
+                    android:text="綜藝娛樂"
+                    android:textColor="@color/content_table_header_title_color"
+                    android:textSize="@dimen/content_table_header_title_textsize"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton22"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView18"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView18"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView25"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton23"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:id="@+id/TextView19"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView25"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton20"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView20"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView24"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton21"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView21"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView23"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton18"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView22"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView22"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton19"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView24"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView21"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton24"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView25"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView20"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton25"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView23"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView19"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/TextView35"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_table_header_bg"
+                    android:paddingLeft="@dimen/content_table_header_padding_left"
+                    android:paddingTop="@dimen/content_table_header_padding_top"
+                    android:shadowColor="@color/content_table_header_title_shadowcolor"
+                    android:shadowDy="-1"
+                    android:shadowRadius="1"
+                    android:text="兒童"
+                    android:textColor="@color/content_table_header_title_color"
+                    android:textSize="@dimen/content_table_header_title_textsize"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton14"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView10"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView10"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton15"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView11"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView17"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton12"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView12"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView16"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton13"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView13"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView15"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton10"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView14"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView14"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton11"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView16"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView13"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton16"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView17"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView12"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton17"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView15"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView11"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/TextView34"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_table_header_bg"
+                    android:paddingLeft="@dimen/content_table_header_padding_left"
+                    android:paddingTop="@dimen/content_table_header_padding_top"
+                    android:shadowColor="@color/content_table_header_title_shadowcolor"
+                    android:shadowDy="-1"
+                    android:shadowRadius="1"
+                    android:text="劇集"
+                    android:textColor="@color/content_table_header_title_color"
+                    android:textSize="@dimen/content_table_header_title_textsize"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView09"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton09"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView09"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView09"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView08"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton08"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView08"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView08"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton07"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView07"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView07"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView06"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton06"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView06"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView06"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView05"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton05"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView05"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView05"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton04"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView04"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView04"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton03"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView03"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView03"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton02"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView02"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView02"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/TextView37"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_table_header_bg"
+                    android:paddingLeft="@dimen/content_table_header_padding_left"
+                    android:paddingTop="@dimen/content_table_header_padding_top"
+                    android:shadowColor="@color/content_table_header_title_shadowcolor"
+                    android:shadowDy="-1"
+                    android:shadowRadius="1"
+                    android:text="體育"
+                    android:textColor="@color/content_table_header_title_color"
+                    android:textSize="@dimen/content_table_header_title_textsize"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView34"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton38"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView38"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView34"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView41"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton39"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView39"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView41"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView40"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton36"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView40"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView40"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView39"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton37"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView41"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView39"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView38"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton34"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView42"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView38"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView37"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton35"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView44"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView37"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView36"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton40"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView45"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView36"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/program_thumbnail_margin_bottom"
+                            android:layout_marginLeft="@dimen/program_thumbnail_margin_left"
+                            android:layout_marginRight="@dimen/program_thumbnail_margin_right"
+                            android:layout_marginTop="@dimen/program_thumbnail_margin_top"
+                            android:layout_weight="0.25" >
+
+                            <ImageView
+                                android:id="@+id/ImageView35"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/empty_program_b" />
+
+                            <ImageButton
+                                android:id="@+id/ImageButton41"
+                                android:layout_width="166dp"
+                                android:layout_height="122dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/_program_thumb_nail" />
+
+                            <TextView
+                                android:id="@+id/TextView43"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ImageView35"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/program_thumbnail_title_margin_top"
+                                android:gravity="center_horizontal"
+                                android:lines="2"
+                                android:text="白領公寓"
+                                android:textColor="@color/program_thumbnail_titleprogram_thumbnail_title"
+                                android:textSize="@dimen/program_thumbnail_title_textsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/topbarlv1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-9dp"
+            android:background="@drawable/topbar_lv1"
+            android:clipToPadding="false"
+            android:fadingEdge="none"
+            android:paddingLeft="30dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/Button06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topbar_item_height"
+                    android:background="@drawable/topbar_lv1_active"
+                    android:minWidth="@dimen/topbar_item_min_width"
+                    android:onClick="TopBarItemTapped"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="全部"
+                    android:textColor="@color/topbar_lv1_title_active"
+                    android:textSize="@dimen/topbar_lv1_title_size" />
+
+                <Button
+                    android:id="@+id/Button02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topbar_item_height"
+                    android:background="@null"
+                    android:minWidth="@dimen/topbar_item_min_width"
+                    android:onClick="TopBarItemTapped"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="新聞財經"
+                    android:textColor="@color/topbar_lv1_title"
+                    android:textSize="@dimen/topbar_lv1_title_size" />
+
+                <Button
+                    android:id="@+id/Button05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topbar_item_height"
+                    android:background="@null"
+                    android:minWidth="@dimen/topbar_item_min_width"
+                    android:onClick="TopBarItemTapped"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="綜藝娛樂"
+                    android:textColor="@color/topbar_lv1_title"
+                    android:textSize="@dimen/topbar_lv1_title_size" />
+
+                <Button
+                    android:id="@+id/Button01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topbar_item_height"
+                    android:background="@null"
+                    android:minWidth="@dimen/topbar_item_min_width"
+                    android:onClick="TopBarItemTapped"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="兒童"
+                    android:textColor="@color/topbar_lv1_title"
+                    android:textSize="@dimen/topbar_lv1_title_size" />
+
+                <Button
+                    android:id="@+id/Button04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topbar_item_height"
+                    android:background="@null"
+                    android:minWidth="@dimen/topbar_item_min_width"
+                    android:onClick="TopBarItemTapped"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="劇集"
+                    android:textColor="@color/topbar_lv1_title"
+                    android:textSize="@dimen/topbar_lv1_title_size"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/Button03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topbar_item_height"
+                    android:background="@null"
+                    android:minWidth="@dimen/topbar_item_min_width"
+                    android:onClick="TopBarItemTapped"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="體育"
+                    android:textColor="@color/topbar_lv1_title"
+                    android:textSize="@dimen/topbar_lv1_title_size" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

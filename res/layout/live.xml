@@ -1,0 +1,272 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg_repeat"
+    tools:ignore="HardcodedText,ContentDescription,SelectableText,ObsoleteLayoutParam,TooManyViews" >
+
+    <RelativeLayout
+        android:id="@+id/live_canvas"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipChildren="false"
+        android:tag="parent!!!"
+        android:clipToPadding="false" >
+
+        <View
+            android:id="@+id/helperview"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true" />
+
+                <LinearLayout
+            android:id="@+id/live_player_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/helperview"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/player_canvas"
+                layout="@layout/player_canvas" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/current_ch_logo"
+                    android:layout_width="104dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/_channel_logo" />
+
+                <TextView
+                    android:id="@+id/current_ch_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/current_ch_logo"
+                    android:layout_marginLeft="24dp"
+                    android:layout_toRightOf="@id/current_ch_logo"
+                    android:text=""
+                    android:textColor="@color/live_text_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/current_program_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/current_ch_title"
+                    android:layout_below="@id/current_ch_title"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="12dp"
+                    android:text=""
+                    android:textColor="@color/live_text_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/current_program_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/current_program_title"
+                    android:layout_below="@id/current_program_title"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textColor="@color/live_text_gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/epg_slider_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/helperview" >
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/main_frame_bg_repeat" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/live_epg_slider_bg" />
+
+            <ImageView
+                android:id="@+id/epg_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="-40dp"
+                android:clickable="true"
+                android:src="@drawable/live_epg_slider" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/live_epg_slider_mask" />
+
+            <custom.widget.ObservableHorizontalScrollView
+                android:id="@+id/live_fullepg_timelineScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_marginRight="130dp"
+                android:alpha="0"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingLeft="200dp"
+                android:scrollbars="none" >
+            </custom.widget.ObservableHorizontalScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/current_program_table_right"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="48dp"
+            android:layout_toLeftOf="@id/helperview"
+            android:animateLayoutChanges="true"
+            android:background="@color/live_currentprogram_bg"
+            android:visibility="invisible" >
+
+            <custom.widget.adapterview.ObservableListView
+                android:id="@+id/current_program_table_rightScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdge="vertical"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollingCache="false" >
+            </custom.widget.adapterview.ObservableListView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/full_epg_canvas"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="48dp"
+            android:layout_toLeftOf="@id/current_program_table_right"
+            android:background="@color/live_fullepg_bg"
+            android:visibility="invisible" >
+
+			<custom.widget.ObservableHorizontalScrollView
+			        android:layout_width="fill_parent"
+			    	android:layout_height="match_parent"
+			    	android:id="@+id/fullepgScrollView_horizontal"
+			    	android:scrollbars="none">
+			    	
+			    <!-- ListView must wrapped with a layout if putting ListView inside HorizontalScrollView. -->
+			    <LinearLayout 
+			        android:layout_width="wrap_content"
+			    	android:layout_height="match_parent">
+						
+		            <custom.widget.adapterview.ObservableListView
+		                android:id="@+id/fullepgScrollView"
+		                android:layout_width="23040dp"
+		                android:layout_height="fill_parent"
+		                android:layout_alignParentLeft="true"
+		                android:layout_alignParentTop="true"
+		                android:fadingEdge="vertical"
+		                android:overScrollMode="never"
+		                android:scrollbars="none"
+		                android:divider="@android:color/transparent"
+		                android:dividerHeight="0dp"
+		                android:listSelector="@android:color/transparent"
+		                android:scrollingCache="false" >
+		                
+		            </custom.widget.adapterview.ObservableListView>
+			        
+			    </LinearLayout>
+			    
+			</custom.widget.ObservableHorizontalScrollView>            
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/live_epg_program_left_shadow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/live_anchor_now"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/live_fullepg_anchor_margin_top"
+            android:scaleType="fitXY"
+            android:src="@drawable/live_epg_anchor_now"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/current_program_table_left"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="48dp"
+            android:background="@color/live_currentprogram_bg"
+            android:visibility="invisible" >
+
+            <custom.widget.adapterview.ObservableListView
+                android:id="@+id/current_program_table_leftScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdge="vertical"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollingCache="false" >
+            </custom.widget.adapterview.ObservableListView>
+            
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/live_anchor_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/live_fullepg_anchor_margin_left"
+            android:layout_marginTop="@dimen/live_fullepg_anchor_margin_top"
+            android:clickable="true"
+            android:src="@drawable/live_epg_anchor_left"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/live_anchor_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/live_fullepg_anchor_margin_right"
+            android:layout_marginTop="@dimen/live_fullepg_anchor_margin_top"
+            android:clickable="true"
+            android:src="@drawable/live_epg_anchor_right"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

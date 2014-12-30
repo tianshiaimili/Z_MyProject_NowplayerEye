@@ -1,0 +1,16 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/live_left_channel_list_section_text"
+    android:layout_width="match_parent"
+    android:layout_height="23dp"
+    android:layout_marginBottom="@dimen/live_currentprogram_height_marginbtm"
+    android:background="@drawable/content_table_header_bg"
+    android:paddingLeft="@dimen/content_table_header_padding_left"
+    android:paddingTop="@dimen/content_table_header_padding_top"
+    android:shadowColor="@color/content_table_header_title_shadowcolor"
+    android:shadowDy="-1"
+    android:shadowRadius="1"
+    android:textColor="@color/content_table_header_title_color"
+    android:textSize="@dimen/content_table_header_title_textsize"
+    android:textStyle="bold"/>

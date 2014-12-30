@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/program_menu_button"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/topbar_item_height"
+    android:background="@null"
+    android:minWidth="@dimen/topbar_item_min_width"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:textColor="@color/topbar_lv1_title"
+    android:textSize="@dimen/topbar_lv1_title_size" />

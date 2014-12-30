@@ -1,0 +1,24 @@
+package com.pccw.nowplayer;
+
+public class Constants {
+	
+	public static final String APP_INFO_URL = "http://b2bapi.nowtv.now.com/b2bapi/getAppInfo?";
+//	public static final String APP_INFO_URL = "https://dl.dropboxusercontent.com/u/6923693/nmal_app/appInfo.txt";
+//	public static final String APP_INFO_URL = "http://10.37.131.68:8080/nowplayer/appInfo.txt";
+	//public static final String APP_INFO_URL = "https://dl.dropboxusercontent.com/u/248068544/testing/nowPicks/appInfo_ANDROID.txt?";
+	public static final String APP_INFO_APP_ID = "04";
+	public static final String JSON_ZIP_VERSION_PREFIX = "/%1$s";
+	public static final String CHECKOUT_URL = "http://b2bapi.nowtv.now.com/b2bapi";
+	
+	// eye id.
+	public static final String EYEAPP_ACCOUNT_TYPE = "com.pccw.eyeapp.accounts";
+	public static final String EYEAPP_TOKEN_TYPE = "nowtvplayer";
+	
+	// ad
+	public static final String AD_APP_ID = "PL";
+	public static final String AD_SPLASH_SLOT_ID = "SLT-0000015";
+//	public static final String AD_SPLASH_URL = "http://adapi.now.com/ad/api/ads.ashx?slt=PL-SLT-0000015&lng=TC&opt=XML";
+	
+	public static final String PIXEL_LOG_URL = "http://nowplayer.now.com/plog.gif";
+	public static final String PIXEL_LOG_APP_NAME = "AndroidNPEyeApp";
+}

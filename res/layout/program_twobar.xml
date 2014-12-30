@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg_repeat"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,ContentDescription,DisableBaselineAlignment,TooManyViews,ButtonStyle" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true" >
+
+        <HorizontalScrollView
+            android:id="@+id/program_category_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-9dp"
+            android:background="@drawable/topbar_lv1"
+            android:clipToPadding="false"
+            android:fadingEdge="none"
+            android:paddingLeft="30dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/program_menubar_lv1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/program_subcategory_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/program_category_bar"
+            android:background="@drawable/topbar_lv2"
+            android:clipToPadding="false"
+            android:paddingLeft="30dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/program_menubar_lv2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </HorizontalScrollView>
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layout_below="@+id/program_subcategory_bar" >
+
+            <GridView
+                android:id="@+id/program_gridview_session"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:horizontalSpacing="5dp"
+                android:numColumns="4"
+                android:verticalSpacing="2dp" />
+
+            <ScrollView
+                android:id="@+id/program_scrollView_all"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/program_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <!-- <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/content_table_header_bg"
+                        android:paddingLeft="@dimen/content_table_header_padding_left"
+                        android:paddingTop="@dimen/content_table_header_padding_top"
+                        android:shadowColor="@color/content_table_header_title_shadowcolor"
+                        android:shadowDy="-1"
+                        android:shadowRadius="1"
+                        android:text="新聞財經2"
+                        android:textColor="@color/content_table_header_title_color"
+                        android:textSize="@dimen/content_table_header_title_textsize"
+                        android:textStyle="bold" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/HorizontalScrollView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none" >
+
+                    </HorizontalScrollView> -->
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
+	</RelativeLayout>
+        
+	
+    
+</RelativeLayout>

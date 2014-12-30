@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg_repeat"
+    android:orientation="vertical" >
+    
+
+     <RelativeLayout
+        android:id="@+id/detailpanel"
+        android:layout_width="390dp"
+        android:layout_height="503dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/logon_dialog_bg"
+        android:padding="0dp" >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="69dp"
+            android:src="@drawable/logon_dialog_logo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="181dp"
+            android:text="免費登記"
+            android:textColor="@color/logon_dialog_orange_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="213dp"
+            android:text="或忘記已登記之now ID"
+            android:textColor="@color/logon_dialog_gray_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="245dp"
+            android:background="@drawable/play_btn_bg_status"
+            android:paddingBottom="0dp"
+            android:paddingLeft="64dp"
+            android:paddingRight="64dp"
+            android:paddingTop="0dp"
+            android:shadowColor="@color/logon_dialog_btn_shadowcolor"
+            android:shadowDy="-1"
+            android:shadowRadius="1"
+            android:text="登入"
+            android:textColor="@color/logon_dialog_btn_textcolor"
+            android:textSize="@dimen/logon_dialog_button_titlesize"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/logon_dialog_screens" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="45dp"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/logon_dialog_hotline_zh" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/imageView6"
+            android:layout_alignRight="@id/imageView6"
+            android:layout_alignTop="@id/imageView5"
+            android:layout_marginLeft="-12dp"
+            android:layout_marginRight="-12dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="@string/logon_text_zh"
+            android:textColor="@color/logon_dialog_dark_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    
+</RelativeLayout>
