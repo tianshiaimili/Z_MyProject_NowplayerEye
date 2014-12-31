@@ -83,6 +83,7 @@ public class MainTabletActivity extends BaseFragmentActivity implements OnClickL
 		super.onCreate(bun);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏 
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		LogUtils2.d("****** onCreate  ");
 		setContentView(R.layout.main_layout_tablet);
 		sidebar = findViewById(R.id.sidebar);
 		//setOnClickListener();
